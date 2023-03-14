@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/aprakash97/ChangeLog-API/issues"
   },
-  "homepage": "https://github.com/aprakash97/ChangeLog-API#readme"
+  "homepage": "https://github.com/aprakash97/ChangeLog-API#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "prisma": "^4.11.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
 }
