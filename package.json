@@ -20,7 +20,10 @@
   "homepage": "https://github.com/aprakash97/ChangeLog-API#readme",
   "dependencies": {
     "@prisma/client": "^4.11.0",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
