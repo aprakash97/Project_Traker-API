@@ -9,3 +9,13 @@ export const createJWT = (user) => {
   return token;
   //authorization header
 };
+
+export const protect = (req, res) => {
+  const bearer = req.headers.authorization;
+
+  if (!bearer) {
+    res.status(401);
+    res.json({ message: "not authorized" });
+    return;
+  }
+};
