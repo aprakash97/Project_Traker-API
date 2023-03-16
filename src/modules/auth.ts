@@ -10,6 +10,7 @@ export const createJWT = (user) => {
   //authorization header
 };
 
+//protect middleware
 export const protect = (req, res, next) => {
   const bearer = req.headers.authorization;
 
