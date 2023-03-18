@@ -40,8 +40,16 @@ app.post("/signin", signin);
 
 //ERROR HANDLER
 app.use((err, req, res, next) => {
-  console.log(err);
-  res.json({ message: `Oops Error ${err.message}` });
+  if (err.type === "auth") {
+    res.status(401);
+    res.json({ message: "unauthorized" });
+  } else if (err.type === "input") {
+    res.status(400);
+    res.json({ message: "invalid input" });
+  } else {
+    res.status(500);
+    res.json({ message: "oops, that's on us" });
+  }
 });
 
 export default app;
