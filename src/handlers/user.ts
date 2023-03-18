@@ -1,6 +1,8 @@
 import prisma from "../db";
 import { comparePasswords, createJWT, hashPassword } from "../modules/auth";
 
+//Signup
+//error handlingf - same username exist 
 export const createNewUser = async (req, res, next) => {
   try {
     const user = await prisma.user.create({
