@@ -38,7 +38,7 @@ enum UPDATE_STATUS {
 model Update {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
-  updatedAt DateTime
+  updatedAt DateTime @updatedAt
 
   title   String
   body    String
@@ -46,8 +46,8 @@ model Update {
   version String?
   asset   String?
 
-  producId    String
-  product     Product       @relation(fields: [producId], references: [id])
+  productId    String
+  product     Product       @relation(fields: [productId], references: [id])
   updatePoints UpdatePoint[]
 }
 
